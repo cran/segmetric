@@ -1,6 +1,6 @@
 Package: segmetric
 Title: Metrics for Assessing Segmentation Accuracy for Geospatial Data
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     c(person(given = "Rolf",
            family = "Simoes",
@@ -28,13 +28,13 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
 Imports: magrittr, graphics, sf, units
-Suggests: dplyr, testthat (>= 3.0.0)
+Suggests: classInt, dplyr, testthat (>= 3.0.0)
 Depends: R (>= 2.10)
 NeedsCompilation: no
-Packaged: 2022-01-03 17:58:26 UTC; araujopicoli
+Packaged: 2022-03-30 13:56:44 UTC; araujopicoli
 Author: Rolf Simoes [aut] (<https://orcid.org/0000-0003-0953-4132>),
   Alber Sanchez [aut] (<https://orcid.org/0000-0001-7966-2880>),
   Michelle Picoli [aut, cre] (<https://orcid.org/0000-0001-9855-2046>)
 Maintainer: Michelle Picoli <mipicoli@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-01-04 14:50:06 UTC
+Date/Publication: 2022-03-30 16:20:02 UTC
