@@ -1,23 +1,12 @@
-#' @title Pipe
-#'
-#' @name %>%
-#' 
 #' @importFrom magrittr `%>%`
-#' 
-#' @description
-#' Imported function from `magrittr`.
-#'
-#' @param lhs left hand side parameter.
-#' @param rhs right hand side parameter, usually a function.
-#' 
-#' @return Return any object evaluated by function call `rhs(lhs, ...)`.
-#' 
 #' @export
-NULL
+magrittr::`%>%`
 
 #' @importFrom graphics legend
 #' @importFrom grDevices hcl.colors
 #' @importFrom stats quantile
+#' @importFrom sf st_area st_centroid st_distance st_intersection st_union
+#' read_sf st_is_valid st_crs st_geometry st_bbox st_drop_geometry st_as_sf
 NULL
 
 # package environment
@@ -25,5 +14,6 @@ NULL
 
 # package on load
 .onLoad <- function(libname, pkgname) {
+    sm_options(digits = 10)
     .db_registry()
 }

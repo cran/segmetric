@@ -28,6 +28,7 @@ sm_new_metric(
   fn_subset,
   name = "",
   optimal = 0,
+  summarizable = TRUE,
   description = "",
   reference = ""
 )
@@ -86,7 +87,7 @@ the database.
 sm_reg_metric(
     metric_id = "Example",
     entry = sm_new_metric(
-        fn = function(m) {
+        fn = function(m, ...) {
             sm_area(sm_ytilde(m)) / 
                 sm_area(sm_ref(m), order = sm_ytilde(m))
         },

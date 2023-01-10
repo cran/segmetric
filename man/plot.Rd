@@ -10,8 +10,8 @@
   type = "base",
   ...,
   title = NULL,
-  background = "#FAFAFA",
   layers = c("ref_sf", "seg_sf"),
+  background = "#FFFFFF",
   ref_color = "#FF00009F",
   ref_fill = "#FFFFFF00",
   ref_label = "reference",
@@ -31,6 +31,9 @@
   subset_fill = "#F0E4167F",
   metric_id = NULL,
   break_style = "jenks",
+  choropleth_palette = "YlGnBu",
+  choropleth_palette_reverse = FALSE,
+  choropleth_size = 0.1,
   plot_extent = NULL,
   plot_legend = TRUE,
   plot_axes = TRUE
@@ -45,11 +48,10 @@
 
 \item{title}{A \code{character} with plot title}
 
-\item{background}{A \code{character} with a valid hexadecimal color in \code{rgb} or
-\code{rgba} format. Set the map background color.}
-
 \item{layers}{A \code{character}. One or both of \code{"ref_sf"} and \code{"seg_sf"}
 (works only for \code{type = "base"} and \code{type = "subset"}).}
+
+\item{background}{A \code{character} with valid color used in graph's background.}
 
 \item{ref_color, seg_color, ref_fill, seg_fill}{A \code{character} with a
 valid hexadecimal color in \code{rgb} or \code{rgba} format. Set the border and fill
@@ -87,6 +89,14 @@ the intervals for choropleth maps. Can be one of \code{"sd"}, \code{"equal"},
 \code{"pretty"}, \code{"quantile"}, \code{"kmeans"}, \code{"hclust"}, \code{"bclust"}, \code{"fisher"},
 \code{"jenks"}, \code{"dpih"}, and \code{"headtails"} (see \code{style} parameter in
 \link[classInt]{classIntervals}).}
+
+\item{choropleth_palette}{A \code{character} with a valid palette to be used
+in choropleth plots.}
+
+\item{choropleth_palette_reverse}{A \code{logical} indicating if palette should
+be generated in reversely.}
+
+\item{choropleth_size}{A \code{numeric} with border size used to plot polygons.}
 
 \item{plot_extent}{A \code{sf} object. Set the map extent for a plot.}
 
